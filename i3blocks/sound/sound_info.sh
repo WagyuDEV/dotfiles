@@ -1,9 +1,9 @@
 #!/bin/sh
 
-VOLUME_MUTE="🔇"
-VOLUME_LOW="🔈"
-VOLUME_MID="🔉"
-VOLUME_HIGH="🔊"
+VOLUME_MUTE="Mute "
+VOLUME_LOW="Low "
+VOLUME_MID="Mid "
+VOLUME_HIGH="High "
 SOUND_LEVEL=$(amixer -M get Master | awk -F"[][]" '/%/ { print $2 }' | awk -F"%" 'BEGIN{tot=0; i=0} {i++; tot+=$1} END{printf("%s\n", tot/i) }')
 MUTED=$(amixer get Master | awk ' /%/{print ($NF=="[off]" ? 1 : 0); exit;}')
 
