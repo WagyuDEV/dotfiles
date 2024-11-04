@@ -1,5 +1,5 @@
 [NETWORK]
-command=~/.config/i3blocks/network/network_info.sh
+command=~/.config/i3blocks/network/networkinfo.sh
 interval=5
 
 [DISK]
