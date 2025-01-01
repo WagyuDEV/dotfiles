@@ -32,6 +32,11 @@ command=~/.config/i3blocks/sound/sound_info.sh
 interval=repeat
 signal=1
 
+[BRIGHTNESS]
+command=cat /sys/class/backlight/*/brightness
+interval=1
+color=#551dc4
+
 [TIME_DATE]
 command=date +" %a, %d %b - %H:%M:%S"
 interval=1
